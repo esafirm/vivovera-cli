@@ -1,0 +1,19 @@
+{
+  "name": "vivovera-cli",
+  "version": "1.0.0",
+  "description": "CLI client for Vivovera Absen",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "tsc && node build/local/index.js",
+    "test": "echo \"no test yet\" && exit 0"
+  },
+  "author": "Esa Firman",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "inquirer": "^3.2.0"
+  },
+  "devDependencies": {
+    "@types/inquirer": "0.0.35"
+  }
+}
