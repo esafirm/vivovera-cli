@@ -3,11 +3,9 @@ import { Absen } from './Absen'
 class Validator {
 
     validate(absen: Absen) {
-        let notNull = absen.nik == undefined
-            && absen.compid == undefined
-            && absen.address == undefined
 
-        if (!notNull) {
+        let isNotEmpty = absen && absen.nik && absen.compid && absen.address
+        if (!isNotEmpty) {
             throw new Error('Data Empty')
         }
 
