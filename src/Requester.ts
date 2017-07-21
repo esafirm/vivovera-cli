@@ -17,9 +17,13 @@ class Requester {
     execute(absen: Absen) {
         console.log('Requesting ...')
 
+        let geoLocStatus = process.env.NODE_ENV == 'production'
+            ? 'success'
+            : 'failed'
+
         let param = qs.stringify({
             'geoloc_status': true,
-            'geoloc_response': 'failed',
+            'geoloc_response': geoLocStatus,
             'currdb': 'vivoveradb',
             'proc_val': 'mobile_checkin',
             'nik': absen.nik,
